@@ -1,0 +1,55 @@
+{% include "header.html" %}
+<html>
+<body>
+    <div class="documentation">
+        <div class="display-inline">
+            <h2>Documentation</h2>
+
+                <div class="all">
+                    <h3>Get all Attractions:</h3>
+                    <p>For getting all attractions use: <strong>http://127.0.0.1:5000/all</strong></p>
+                </div>
+
+                <div class="column">
+                    <h3>Get all types, regions or cities:</h3>
+                    <p>Possible column names: <strong>REGION, CITY, TYPE</strong></p>
+                    <p>Example:</p>
+                    <p><strong>http://127.0.0.1:5000/column_data/CITY</strong></p>
+                </div>
+
+                <div class="filter">
+                    <h3>Filter data of Attractions by:</h3>
+                    <p>you can choose Columns:</p>
+                    <p><strong>Column names: NAME, REGION, CITY, TYPE.</strong></p>
+                    <p>Example:</p>
+                    <p><strong>http://127.0.0.1:5000/column/REGION/name/KOSICE</strong></p>
+                </div>
+
+                <div class="add">
+                    <h3>Add Attraction:</h3>
+                    <p>For adding new attraction use:</p>
+                    <p><strong>http://127.0.0.1:5000/add</strong></p>
+                    <p>In to body of request you <strong>need to add:</strong></p>
+                    <p>{"NAME": "name of the tourist attraction",
+                        "LOC": "location(google map link or something similar)", "REGION": "name of the region",
+                        "CITY": "nearest city or town"}</strong>
+                    </p>
+                </div>
+
+                <div class="update">
+                    <h3>Update Attraction:</h3>
+                    <p><Strong>http://127.0.0.1:5000/update/name of attraction</Strong></p>
+                    <p>In to the body of request you can specify which value you want update example:
+                       {"REGION": "Other region than original"}
+                    </p>
+                </div>
+
+                <div class="remove">
+                    <h3>Remove Attraction:</h3>
+                    <p><strong>http://127.0.0.1:5000//remove_attraction/attraction name</strong></p>
+                </div>
+        </div>
+    </div>
+
+</body>
+</html>
